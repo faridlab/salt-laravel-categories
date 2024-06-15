@@ -1,0 +1,1290 @@
+[
+    {
+        "name": "Rumah Tangga",
+        "children": [
+            {
+                "name": "Dekorasi",
+                "children": [
+                    {
+                        "name": "Cover Kipas Angin",
+                        "children": []
+                    },
+                    {
+                        "name": "Cover Kursi",
+                        "children": []
+                    },
+                    {
+                        "name": "Hiasan Dinding",
+                        "children": []
+                    },
+                    {
+                        "name": "Hiasan Natal",
+                        "children": []
+                    },
+                    {
+                        "name": "Jam Dinding",
+                        "children": []
+                    },
+                    {
+                        "name": "Jam Meja",
+                        "children": []
+                    },
+                    {
+                        "name": "Keset",
+                        "children": []
+                    },
+                    {
+                        "name": "Lampu Pohon Natal",
+                        "children": []
+                    },
+                    {
+                        "name": "Lilin",
+                        "children": []
+                    },
+                    {
+                        "name": "Lilin Aroma Terapi",
+                        "children": []
+                    },
+                    {
+                        "name": "Lukisan",
+                        "children": []
+                    },
+                    {
+                        "name": "Patung",
+                        "children": []
+                    },
+                    {
+                        "name": "Pohon Natal",
+                        "children": []
+                    },
+                    {
+                        "name": "Reed Diffuser",
+                        "children": []
+                    },
+                    {
+                        "name": "Slinger",
+                        "children": []
+                    },
+                    {
+                        "name": "Stiker Kaca",
+                        "children": []
+                    },
+                    {
+                        "name": "Tanaman Artifical",
+                        "children": []
+                    },
+                    {
+                        "name": "Taplak Meja",
+                        "children": []
+                    },
+                    {
+                        "name": "Tempat Lilin",
+                        "children": []
+                    },
+                    {
+                        "name": "Vas Bunga",
+                        "children": []
+                    },
+                    {
+                        "name": "Wall Sticker",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Furniture",
+                "children": []
+            },
+            {
+                "name": "Kamar Mandi",
+                "children": []
+            },
+            {
+                "name": "Kamar Tidur",
+                "children": []
+            },
+            {
+                "name": "Kebersihan",
+                "children": []
+            },
+            {
+                "name": "Kebutuhan Rumah",
+                "children": []
+            },
+            {
+                "name": "Lain-Lain",
+                "children": []
+            },
+            {
+                "name": "Laundry",
+                "children": []
+            },
+            {
+                "name": "Ruang Tamu & Keluarga",
+                "children": []
+            },
+            {
+                "name": "Taman",
+                "children": []
+            },
+            {
+                "name": "Tempat Penyimpanan",
+                "children": []
+            },
+            {
+                "name": "Travel",
+                "children": []
+            }
+        ]
+    },
+    {
+        "name": "Audio, Kamera & Elektronik Lainnya",
+        "children": []
+    },
+    {
+        "name": "Buku",
+        "children": []
+    },
+    {
+        "name": "Dapur",
+        "children": []
+    },
+    {
+        "name": "Elektronik",
+        "children": []
+    },
+    {
+        "name": "Fashion Anak & Bayi",
+        "children": []
+    },
+    {
+        "name": "Fashion Muslim",
+        "children": []
+    },
+    {
+        "name": "Fashion Pria",
+        "children": []
+    },
+    {
+        "name": "Fashion Wanita",
+        "children": []
+    },
+    {
+        "name": "Film & Musik",
+        "children": []
+    },
+    {
+        "name": "Gaming",
+        "children": []
+    },
+    {
+        "name": "Handphone & Tablet",
+        "children": []
+    },
+    {
+        "name": "Ibu & Bayi",
+        "children": []
+    },
+    {
+        "name": "Kecantikan",
+        "children": []
+    },
+    {
+        "name": "Kesehatan",
+        "children": []
+    },
+    {
+        "name": "Komputer & Laptop",
+        "children": []
+    },
+    {
+        "name": "Logam Mulia",
+        "children": []
+    },
+    {
+        "name": "Mainan & Hobi",
+        "children": []
+    },
+    {
+        "name": "Makanan & Minuman",
+        "children": []
+    },
+    {
+        "name": "Office & Stationery",
+        "children": []
+    },
+    {
+        "name": "Olahraga",
+        "children": []
+    },
+    {
+        "name": "Otomotif",
+        "children": []
+    },
+    {
+        "name": "Perawatan Hewan",
+        "children": []
+    },
+    {
+        "name": "Perawatan Tubuh",
+        "children": []
+    },
+    {
+        "name": "Perlengkapan Pesta",
+        "children": []
+    },
+    {
+        "name": "Pertukangan",
+        "children": [
+            {
+                "name": "Alat Angkut Barang",
+                "children": [
+                    {
+                        "name": "Chain Block",
+                        "children": []
+                    },
+                    {
+                        "name": "Katrol",
+                        "children": []
+                    },
+                    {
+                        "name": "Krat Plastik",
+                        "children": []
+                    },
+                    {
+                        "name": "Roda Kastor",
+                        "children": []
+                    },
+                    {
+                        "name": "Stacker",
+                        "children": []
+                    },
+                    {
+                        "name": "Tali Kawat",
+                        "children": []
+                    },
+                    {
+                        "name": "Tangga Lipat",
+                        "children": []
+                    },
+                    {
+                        "name": "Trolley",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Alat Keselamatan",
+                "children": [
+                    {
+                        "name": "Ear Protector",
+                        "children": []
+                    },
+                    {
+                        "name": "Pemadam Api",
+                        "children": []
+                    },
+                    {
+                        "name": "Pita Pembatas & Barikade",
+                        "children": []
+                    },
+                    {
+                        "name": "Rompi Proyek",
+                        "children": []
+                    },
+                    {
+                        "name": "Safety Belt",
+                        "children": []
+                    },
+                    {
+                        "name": "Safety Boots",
+                        "children": []
+                    },
+                    {
+                        "name": "Safety Cone",
+                        "children": []
+                    },
+                    {
+                        "name": "Safety Glasses",
+                        "children": []
+                    },
+                    {
+                        "name": "Safety Glove",
+                        "children": []
+                    },
+                    {
+                        "name": "Safety Helmet",
+                        "children": []
+                    },
+                    {
+                        "name": "Safety Mask",
+                        "children": []
+                    },
+                    {
+                        "name": "Topeng & Helm Las",
+                        "children": []
+                    },
+                    {
+                        "name": "Wearpack",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Alat Perkebunan",
+                "children": [
+                    {
+                        "name": "Alat Semprot Hama",
+                        "children": []
+                    },
+                    {
+                        "name": "Cangkul",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Blower",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Fogging",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Traktor",
+                        "children": []
+                    },
+                    {
+                        "name": "Pisau Sabit",
+                        "children": []
+                    },
+                    {
+                        "name": "Sekop",
+                        "children": []
+                    },
+                    {
+                        "name": "Sprinkler",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Alat Ukur Industri",
+                "children": [
+                    {
+                        "name": "Pengukur Arus Air",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Arus Listrik",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Berat",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Dimensi",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Intensitas Cahaya",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Intensitas Suara",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Kecepatan Rotasi",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Kelembaban",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Kualitas Udara",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Tekanan",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Temperatur",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengukur Tingkat Keasaman",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Baut & Mur Pengencang",
+                "children": [
+                    {
+                        "name": "Baut",
+                        "children": []
+                    },
+                    {
+                        "name": "Hook",
+                        "children": []
+                    },
+                    {
+                        "name": "Mur",
+                        "children": []
+                    },
+                    {
+                        "name": "Ring Plat",
+                        "children": []
+                    },
+                    {
+                        "name": "Rivet",
+                        "children": []
+                    },
+                    {
+                        "name": "Skrup",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Cat & Perlengkapan",
+                "children": [
+                    {
+                        "name": "Cat Kayu",
+                        "children": []
+                    },
+                    {
+                        "name": "Cat Pelapis",
+                        "children": []
+                    },
+                    {
+                        "name": "Cat Semprot",
+                        "children": []
+                    },
+                    {
+                        "name": "Cat Tembok",
+                        "children": []
+                    },
+                    {
+                        "name": "Kuas Cat",
+                        "children": []
+                    },
+                    {
+                        "name": "Plamir",
+                        "children": []
+                    },
+                    {
+                        "name": "Roller Cat",
+                        "children": []
+                    },
+                    {
+                        "name": "Thinner",
+                        "children": []
+                    },
+                    {
+                        "name": "Wallpaper",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Generator & Genset",
+                "children": []
+            },
+            {
+                "name": "Gerobak",
+                "children": []
+            },
+            {
+                "name": "Hand Tools",
+                "children": [
+                    {
+                        "name": "Alat Penjepit",
+                        "children": []
+                    },
+                    {
+                        "name": "Blow Torch",
+                        "children": []
+                    },
+                    {
+                        "name": "Gergaji",
+                        "children": []
+                    },
+                    {
+                        "name": "Gunting Pipa",
+                        "children": []
+                    },
+                    {
+                        "name": "Kapak",
+                        "children": []
+                    },
+                    {
+                        "name": "Kertas Amplas",
+                        "children": []
+                    },
+                    {
+                        "name": "Kunci Inggris",
+                        "children": []
+                    },
+                    {
+                        "name": "Kunci L",
+                        "children": []
+                    },
+                    {
+                        "name": "Kunci Ring Pas",
+                        "children": []
+                    },
+                    {
+                        "name": "Kunci Shock",
+                        "children": []
+                    },
+                    {
+                        "name": "Kunci T",
+                        "children": []
+                    },
+                    {
+                        "name": "Mata Obeng",
+                        "children": []
+                    },
+                    {
+                        "name": "Obeng",
+                        "children": []
+                    },
+                    {
+                        "name": "Palu",
+                        "children": []
+                    },
+                    {
+                        "name": "Pinset",
+                        "children": []
+                    },
+                    {
+                        "name": "Sendok Semen",
+                        "children": []
+                    },
+                    {
+                        "name": "Staples Gun",
+                        "children": []
+                    },
+                    {
+                        "name": "Tang",
+                        "children": []
+                    },
+                    {
+                        "name": "Tang Crimping",
+                        "children": []
+                    },
+                    {
+                        "name": "Tang Potong",
+                        "children": []
+                    },
+                    {
+                        "name": "Tool Kit Set",
+                        "children": []
+                    },
+                    {
+                        "name": "Treker",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Industrial Material",
+                "children": [
+                    {
+                        "name": "Biji Plastik",
+                        "children": []
+                    },
+                    {
+                        "name": "Kaporit",
+                        "children": []
+                    },
+                    {
+                        "name": "Resin",
+                        "children": []
+                    },
+                    {
+                        "name": "Rubber Sheet",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Lampu",
+                "children": [
+                    {
+                        "name": "Bohlam",
+                        "children": []
+                    },
+                    {
+                        "name": "Fitting Lampu",
+                        "children": []
+                    },
+                    {
+                        "name": "Lampu Baca",
+                        "children": []
+                    },
+                    {
+                        "name": "Lampu Darurat",
+                        "children": []
+                    },
+                    {
+                        "name": "Lampu Dinding",
+                        "children": []
+                    },
+                    {
+                        "name": "Lampu Gantung",
+                        "children": []
+                    },
+                    {
+                        "name": "Lampu Hias",
+                        "children": []
+                    },
+                    {
+                        "name": "Lampu Meja",
+                        "children": []
+                    },
+                    {
+                        "name": "Lampu Proyektor",
+                        "children": []
+                    },
+                    {
+                        "name": "Lampu Tidur",
+                        "children": []
+                    },
+                    {
+                        "name": "Senter",
+                        "children": []
+                    },
+                    {
+                        "name": "Smart Lamp",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Ledeng",
+                "children": [
+                    {
+                        "name": "Bath Tub",
+                        "children": []
+                    },
+                    {
+                        "name": "Filter Keran Air",
+                        "children": []
+                    },
+                    {
+                        "name": "Fitting Pipa",
+                        "children": []
+                    },
+                    {
+                        "name": "Foot Valve & Klep",
+                        "children": []
+                    },
+                    {
+                        "name": "Jet Shower Toilet",
+                        "children": []
+                    },
+                    {
+                        "name": "Kepala Shower Mandi",
+                        "children": []
+                    },
+                    {
+                        "name": "Keran Air",
+                        "children": []
+                    },
+                    {
+                        "name": "Kloset",
+                        "children": []
+                    },
+                    {
+                        "name": "Lem Pipa",
+                        "children": []
+                    },
+                    {
+                        "name": "Pembersih Saluran Air",
+                        "children": []
+                    },
+                    {
+                        "name": "Pipa PVC",
+                        "children": []
+                    },
+                    {
+                        "name": "Pompa Air",
+                        "children": []
+                    },
+                    {
+                        "name": "Saringan Got",
+                        "children": []
+                    },
+                    {
+                        "name": "Selang Shower",
+                        "children": []
+                    },
+                    {
+                        "name": "Septic Tank",
+                        "children": []
+                    },
+                    {
+                        "name": "Shower Holder",
+                        "children": []
+                    },
+                    {
+                        "name": "Tiang Shower",
+                        "children": []
+                    },
+                    {
+                        "name": "Toren Air",
+                        "children": []
+                    },
+                    {
+                        "name": "Washtafel",
+                        "children": []
+                    },
+                    {
+                        "name": "Water Heater",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Machinery",
+                "children": [
+                    {
+                        "name": "Mesin Bandsaw",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Bending",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Bubut",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Milling",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Produksi",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Material Bangunan",
+                "children": [
+                    {
+                        "name": "Asbes",
+                        "children": []
+                    },
+                    {
+                        "name": "Baja",
+                        "children": []
+                    },
+                    {
+                        "name": "Batako",
+                        "children": []
+                    },
+                    {
+                        "name": "Batu",
+                        "children": []
+                    },
+                    {
+                        "name": "Batu Bata",
+                        "children": []
+                    },
+                    {
+                        "name": "Besi",
+                        "children": []
+                    },
+                    {
+                        "name": "Beton",
+                        "children": []
+                    },
+                    {
+                        "name": "Digital Lock",
+                        "children": []
+                    },
+                    {
+                        "name": "Engsel",
+                        "children": []
+                    },
+                    {
+                        "name": "Gagang Pintu",
+                        "children": []
+                    },
+                    {
+                        "name": "Gembok",
+                        "children": []
+                    },
+                    {
+                        "name": "Genteng",
+                        "children": []
+                    },
+                    {
+                        "name": "Granit",
+                        "children": []
+                    },
+                    {
+                        "name": "Grendel",
+                        "children": []
+                    },
+                    {
+                        "name": "Jendela",
+                        "children": []
+                    },
+                    {
+                        "name": "Kaca",
+                        "children": []
+                    },
+                    {
+                        "name": "Kawat",
+                        "children": []
+                    },
+                    {
+                        "name": "Kayu",
+                        "children": []
+                    },
+                    {
+                        "name": "Keramik Lantai",
+                        "children": []
+                    },
+                    {
+                        "name": "Kusen Pintu",
+                        "children": []
+                    },
+                    {
+                        "name": "Lantai Kayu",
+                        "children": []
+                    },
+                    {
+                        "name": "Paku",
+                        "children": []
+                    },
+                    {
+                        "name": "Pasir",
+                        "children": []
+                    },
+                    {
+                        "name": "Semen",
+                        "children": []
+                    },
+                    {
+                        "name": "Soda Api",
+                        "children": []
+                    },
+                    {
+                        "name": "Tanah",
+                        "children": []
+                    },
+                    {
+                        "name": "Triplek",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Motors & Power Transmission",
+                "children": [
+                    {
+                        "name": "Dinamo & Motor",
+                        "children": []
+                    },
+                    {
+                        "name": "Industrial Fan",
+                        "children": []
+                    },
+                    {
+                        "name": "Motor Starter",
+                        "children": []
+                    },
+                    {
+                        "name": "Transmission Belt",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Otomasi Industrial",
+                "children": [
+                    {
+                        "name": "Capacitor",
+                        "children": []
+                    },
+                    {
+                        "name": "Circuit Breaker",
+                        "children": []
+                    },
+                    {
+                        "name": "Contactor",
+                        "children": []
+                    },
+                    {
+                        "name": "Digital Counter",
+                        "children": []
+                    },
+                    {
+                        "name": "Encoder",
+                        "children": []
+                    },
+                    {
+                        "name": "Gas Sensor",
+                        "children": []
+                    },
+                    {
+                        "name": "Human Machine Interface",
+                        "children": []
+                    },
+                    {
+                        "name": "Indikator Temperatur",
+                        "children": []
+                    },
+                    {
+                        "name": "Industrial Plug",
+                        "children": []
+                    },
+                    {
+                        "name": "Industrial Socket",
+                        "children": []
+                    },
+                    {
+                        "name": "Level Sensor",
+                        "children": []
+                    },
+                    {
+                        "name": "Limit Switch",
+                        "children": []
+                    },
+                    {
+                        "name": "PID controller",
+                        "children": []
+                    },
+                    {
+                        "name": "PLC",
+                        "children": []
+                    },
+                    {
+                        "name": "Photoelectric Sensor",
+                        "children": []
+                    },
+                    {
+                        "name": "Pilot Light",
+                        "children": []
+                    },
+                    {
+                        "name": "Push Button",
+                        "children": []
+                    },
+                    {
+                        "name": "Relay",
+                        "children": []
+                    },
+                    {
+                        "name": "Remote IO",
+                        "children": []
+                    },
+                    {
+                        "name": "SMPS",
+                        "children": []
+                    },
+                    {
+                        "name": "Sensor Proximity",
+                        "children": []
+                    },
+                    {
+                        "name": "Signal Beacon",
+                        "children": []
+                    },
+                    {
+                        "name": "Signal Towers",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Perangkat Keamanan",
+                "children": [
+                    {
+                        "name": "Access Control Door",
+                        "children": []
+                    },
+                    {
+                        "name": "Alarm",
+                        "children": []
+                    },
+                    {
+                        "name": "Metal Detector",
+                        "children": []
+                    },
+                    {
+                        "name": "Motion Detector",
+                        "children": []
+                    },
+                    {
+                        "name": "Smoke Detector",
+                        "children": []
+                    },
+                    {
+                        "name": "Spare Part",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Perlengkapan Las",
+                "children": [
+                    {
+                        "name": "Generator Las",
+                        "children": []
+                    },
+                    {
+                        "name": "Kawat Las",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Las",
+                        "children": []
+                    },
+                    {
+                        "name": "Pasta Solder",
+                        "children": []
+                    },
+                    {
+                        "name": "Solder",
+                        "children": []
+                    },
+                    {
+                        "name": "Soldering Kit",
+                        "children": []
+                    },
+                    {
+                        "name": "Timah Solder",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Perlengkapan Listrik",
+                "children": [
+                    {
+                        "name": "Adaptor",
+                        "children": []
+                    },
+                    {
+                        "name": "Anti Petir",
+                        "children": []
+                    },
+                    {
+                        "name": "Bel",
+                        "children": []
+                    },
+                    {
+                        "name": "Insulator",
+                        "children": []
+                    },
+                    {
+                        "name": "Isolasi Listrik",
+                        "children": []
+                    },
+                    {
+                        "name": "Kabel Roll",
+                        "children": []
+                    },
+                    {
+                        "name": "Komponen Listrik",
+                        "children": []
+                    },
+                    {
+                        "name": "MCB",
+                        "children": []
+                    },
+                    {
+                        "name": "Pelindung Kabel Spiral",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengaman Stop Kontak",
+                        "children": []
+                    },
+                    {
+                        "name": "Penghemat Listrik",
+                        "children": []
+                    },
+                    {
+                        "name": "Power Supply",
+                        "children": []
+                    },
+                    {
+                        "name": "Saklar",
+                        "children": []
+                    },
+                    {
+                        "name": "Steker",
+                        "children": []
+                    },
+                    {
+                        "name": "Stop Kontak",
+                        "children": []
+                    },
+                    {
+                        "name": "Stun Gun",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Pneumatic",
+                "children": [
+                    {
+                        "name": "Actuator Pneumatic",
+                        "children": []
+                    },
+                    {
+                        "name": "Fitting Pneumatic",
+                        "children": []
+                    },
+                    {
+                        "name": "Kompresor Udara",
+                        "children": []
+                    },
+                    {
+                        "name": "Pengatur Kecepatan",
+                        "children": []
+                    },
+                    {
+                        "name": "Pompa Angin",
+                        "children": []
+                    },
+                    {
+                        "name": "Regulator Pneumatic",
+                        "children": []
+                    },
+                    {
+                        "name": "Silinder Pneumatic",
+                        "children": []
+                    },
+                    {
+                        "name": "Spray & Air Gun",
+                        "children": []
+                    },
+                    {
+                        "name": "Switch Pneumatic",
+                        "children": []
+                    },
+                    {
+                        "name": "Vacuum Pneumatic",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Power Tools",
+                "children": [
+                    {
+                        "name": "Gergaji Listrik",
+                        "children": []
+                    },
+                    {
+                        "name": "Hot Gun",
+                        "children": []
+                    },
+                    {
+                        "name": "Mata Bor",
+                        "children": []
+                    },
+                    {
+                        "name": "Mata Gerinda",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Amplas",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Biscuit Jointer",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Bobok",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Bor",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Gerinda",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Mixer Cat",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Multi Oskilasi",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Pemoles",
+                        "children": []
+                    },
+                    {
+                        "name": "Mesin Serut Kayu",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Tape & Sealant Perekat",
+                "children": [
+                    {
+                        "name": "Lem Material",
+                        "children": []
+                    },
+                    {
+                        "name": "Lem Talang",
+                        "children": []
+                    },
+                    {
+                        "name": "Lem Tembak",
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "name": "Tenaga Surya",
+                "children": [
+                    {
+                        "name": "Solar Cables",
+                        "children": []
+                    },
+                    {
+                        "name": "Solar Charge Controller",
+                        "children": []
+                    },
+                    {
+                        "name": "Solar Inverter",
+                        "children": []
+                    },
+                    {
+                        "name": "Solar Panel",
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Properti",
+        "children": []
+    },
+    {
+        "name": "Tiket, Travel, Voucher",
+        "children": []
+    }
+]
