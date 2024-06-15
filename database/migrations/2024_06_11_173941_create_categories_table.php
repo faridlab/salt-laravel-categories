@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->foreignUuid('parent_id')->nullable()->references('id')->on('categories');
 
             $table->enum('type', [
                 'product', 'service', 'post', 'page', 'other'
