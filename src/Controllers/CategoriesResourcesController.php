@@ -3,6 +3,7 @@
 namespace SaltCategories\Controllers;
 
 use OpenApi\Annotations as OA;
+use Illuminate\Http\Request;
 
 use SaltLaravel\Controllers\Controller;
 use SaltLaravel\Controllers\Traits\ResourceIndexable;
@@ -18,7 +19,7 @@ use SaltLaravel\Controllers\Traits\ResourceDeletable;
 use SaltLaravel\Controllers\Traits\ResourceImportable;
 use SaltLaravel\Controllers\Traits\ResourceExportable;
 use SaltLaravel\Controllers\Traits\ResourceReportable;
-
+use SaltCategories\Models\CategoryTree;
 /**
  * @OA\Info(
  *      title="Categories Endpoint",
@@ -67,5 +68,111 @@ class CategoriesResourcesController extends Controller
     use ResourceImportable;
     use ResourceExportable;
     use ResourceReportable;
+
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function tree(Request $request, CategoryTree $model) {
+
+        if(is_null($model)) {
+            $this->responder->set('message', "Model not found!");
+            $this->responder->setStatus(404, 'Not found.');
+            return $this->responder->response();
+        }
+
+        try {
+            $this->checkPermissions('index', 'read');
+        } catch (\Exception $e) {
+            $this->responder->set('message', 'You do not have authorization.');
+            $this->responder->setStatus(401, 'Unauthorized');
+            return $this->responder->response();
+        }
+
+        try {
+
+            $count = $model->count();
+            $model = $model->filter();
+
+            $format = $request->get('format', 'default');
+
+            $limit = intval($request->get('limit', 25));
+            if($limit > 100) {
+                $limit = 100;
+            }
+
+            $p = intval($request->get('page', 1));
+            $page = ($p > 0 ? $p - 1: $p);
+
+            if($format == 'datatable') {
+                $draw = $request['draw'];
+            }
+
+            $modelCount = clone $model;
+            $meta = array(
+                'recordsTotal' => $count,
+                'recordsFiltered' => $modelCount->count()
+            );
+
+            $data = $model
+                        ->offset(0)
+                        ->limit(1000)
+                        ->orderBy('order','DESC')
+                        ->get();
+
+            $groups = [];
+            $categories = [];
+
+            foreach ($data as $key => $value) {
+                if(is_null($value['parent_id'])) {
+                    $value['children'] = [];
+                    if(isset($groups[$value['id']])) {
+                        $value['children'] = $groups[$value['id']];
+                    }
+                    $categories[] = $value;
+                    continue;
+                }
+
+                if(!isset($groups[$value['parent_id']])) $groups[$value['parent_id']] = [];
+                $value['children'] = [];
+                if(isset($groups[$value['id']])) {
+                    $value['children'] = $groups[$value['id']];
+                }
+                $groups[$value['parent_id']][] = $value;
+            }
+
+            $categories = $this->generateSlugHirarchy($categories);
+
+            $this->responder->set('message', 'Data retrieved.');
+            $this->responder->set('meta', $meta);
+            $this->responder->set('data', $categories);
+
+            $this->responder->set('draw', $draw);
+            $this->responder->set('recordsFiltered', $meta['recordsFiltered']);
+            $this->responder->set('recordsTotal', $meta['recordsTotal']);
+
+            return $this->responder->response();
+        } catch(\Exception $e) {
+            $this->responder->set('message', $e->getMessage());
+            $this->responder->setStatus(500, 'Internal server error.');
+            return $this->responder->response();
+        }
+    }
+
+    function generateSlugHirarchy(&$categories, $parent = null) {
+
+        foreach ($categories as $key => &$value) {
+            $children = $value['children'];
+            if(!is_null($parent)) {
+                $value['slug'] = $parent['slug'].'/'.$value['slug'];
+            }
+            if(!count($children)) continue;
+            $this->generateSlugHirarchy($children, $value);
+        }
+
+        return $categories;
+    }
 }
 
