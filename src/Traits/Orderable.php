@@ -12,21 +12,27 @@ trait Orderable
      */
     public static function bootOrderable() {
         static::creating(function ($model) {
-            if(empty($model->slug) && is_null($model->slug)) {
-                $model->slug = Str::slug($model->name, '-');
+            $parent = null;
+            if(!empty($model->parent_id) && !is_null($model->parent_id)) {
+                $parent = Categories::find($model->parent_id);
             }
-
-            $count = Categories::where('slug', $model->slug)->count();
-            if($count === 0) return;
-
-            $model->slug = $model->slug .'-'. ($count + 1);
+            $order = 0;
+            if(!is_null($parent)) {
+                $order = $parent->order + 1;
+            }
+            $model->order = $order;
         });
 
         static::updating(function ($model) {
-            $count = Categories::where('slug', $model->slug)->count();
-            if($count === 0) return;
-
-            $model->slug = $model->slug .'-'. ($count + 1);
+            $parent = null;
+            if(!empty($model->parent_id) && !is_null($model->parent_id)) {
+                $parent = Categories::find($model->parent_id);
+            }
+            $order = 0;
+            if(!is_null($parent)) {
+                $order = $parent->order + 1;
+            }
+            $model->order = $order;
         });
     }
 }
