@@ -11,11 +11,15 @@ use Illuminate\Support\Facades\Schema;
 use SaltLaravel\Models\Resources;
 use SaltLaravel\Traits\ObservableModel;
 use SaltLaravel\Traits\Uuids;
+use SaltCategories\Traits\Sluggable;
+use SaltCategories\Traits\Orderable;
 
 class Categories extends Resources {
 
     use Uuids;
     use ObservableModel;
+    use Sluggable;
+    use Orderable;
 
     protected $filters = [
         'default',
