@@ -149,7 +149,7 @@ class CategoriesResourcesController extends Controller
             $this->responder->set('meta', $meta);
             $this->responder->set('data', $categories);
 
-            $this->responder->set('draw', $draw);
+            // $this->responder->set('draw', $draw);
             $this->responder->set('recordsFiltered', $meta['recordsFiltered']);
             $this->responder->set('recordsTotal', $meta['recordsTotal']);
 
