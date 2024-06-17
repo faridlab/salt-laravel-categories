@@ -21,6 +21,7 @@ Route::middleware(['api'])
 
     // API: CATEGORIES RESOURCES
     Route::get("categories", [CategoriesResourcesController::class, 'index']); // get entire collection
+    Route::get("categories/tree", [CategoriesResourcesController::class, 'tree']); // get entire tree collection of categories
     Route::post("categories", [CategoriesResourcesController::class, 'store'])->middleware(['auth:api']); // create new collection
 
     Route::get("categories/trash", [CategoriesResourcesController::class, 'trash'])->middleware(['auth:api']); // trash of collection
