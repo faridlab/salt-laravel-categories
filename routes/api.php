@@ -3,15 +3,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use SaltCategories\Controllers\CategoriesResourcesController;
-use SaltCategories\Controllers\ProvincesResourcesController;
-use SaltCategories\Controllers\NestedProvincesResourcesController;
-use SaltCategories\Controllers\CitiesResourcesController;
-use SaltCategories\Controllers\NestedCitiesResourcesController;
-use SaltCategories\Controllers\DistrictsResourcesController;
-use SaltCategories\Controllers\NestedDistrictsResourcesController;
-use SaltCategories\Controllers\SubdistrictsResourcesController;
-use SaltCategories\Controllers\NestedSubdistrictsResourcesController;
-use SaltCategories\Controllers\PostalcodeResourcesController;
 
 $version = config('app.API_VERSION', 'v1');
 
@@ -22,6 +13,7 @@ Route::middleware(['api'])
     // API: CATEGORIES RESOURCES
     Route::get("categories", [CategoriesResourcesController::class, 'index']); // get entire collection
     Route::get("categories/tree", [CategoriesResourcesController::class, 'tree']); // get entire tree collection of categories
+    Route::get("categories/options", [CategoriesResourcesController::class, 'options']); // get entire tree collection of categories
     Route::post("categories", [CategoriesResourcesController::class, 'store'])->middleware(['auth:api']); // create new collection
 
     Route::get("categories/trash", [CategoriesResourcesController::class, 'trash'])->middleware(['auth:api']); // trash of collection
@@ -43,7 +35,5 @@ Route::middleware(['api'])
     Route::patch("categories/{id}", [CategoriesResourcesController::class, 'patch'])->where('id', '[a-zA-Z0-9-]+')->middleware(['auth:api']); // patch collection by ID
     // DESTROY data by ID (id), selected IDs (selected), and All data (all)
     Route::delete("categories/{id}", [CategoriesResourcesController::class, 'destroy'])->where('id', '[a-zA-Z0-9-]+')->middleware(['auth:api']); // soft delete a collection by ID
-
-    Route::resource('categories.provinces', NestedProvincesResourcesController::class);
 
 });
