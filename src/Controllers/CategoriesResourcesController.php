@@ -4,9 +4,9 @@ namespace SaltCategories\Controllers;
 
 use OpenApi\Annotations as OA;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 use SaltLaravel\Controllers\Controller;
-use SaltLaravel\Controllers\Traits\ResourceIndexable;
 use SaltLaravel\Controllers\Traits\ResourceStorable;
 use SaltLaravel\Controllers\Traits\ResourceShowable;
 use SaltLaravel\Controllers\Traits\ResourceUpdatable;
@@ -36,25 +36,60 @@ class CategoriesResourcesController extends Controller
     protected $modelNamespace = 'SaltCategories';
 
     /**
-     * @OA\Get(
-     *      path="/api/v1/countries",
-     *      @OA\ExternalDocumentation(
-     *          description="More documentation here...",
-     *          url="https://github.com/faridlab/laravel-search-query"
-     *      ),
-     *      @OA\Parameter(
-     *          in="query",
-     *          name="search",
-     *          required=false
-     *      ),
-     *      @OA\Response(
-     *          response="200",
-     *          description="List of Country"
-     *      ),
-     *      @OA\Response(response="default", description="Welcome page")
-     * )
-     */
-    use ResourceIndexable;
+   * Display a listing of the resource.
+   *
+   * @return \Illuminate\Http\Response
+   */
+    public function index(Request $request, $parentId = null) {
+
+        $this->checkModelAuthorization('index', 'read');
+
+        try {
+
+            $count = $this->model->count();
+            $model = $this->model->filter();
+
+            if($this->is_nested === true) {
+                if(is_null($this->parent_field)) {
+                throw new \Exception('Please define $parent_field');
+                }
+                $count = $this->model->where($this->parent_field, $parentId)->count();
+                $model = $this->model->where($this->parent_field, $parentId)->filter();
+            }
+
+            $format = $request->get('format', 'default');
+
+            $limit = intval($request->get('limit', 25));
+            if($limit > 100) {
+                $limit = 100;
+            }
+
+            $p = intval($request->get('page', 1));
+            $page = ($p > 0 ? $p - 1: $p);
+
+            $modelCount = clone $model;
+            $meta = array(
+                'recordsTotal' => $count,
+                'recordsFiltered' => $modelCount->count()?: $count
+            );
+
+            $data = $model
+                        ->select('*', DB::raw("trim(concat_ws(' ', substr('---', 1, categories.order), name)) as name"))
+                        ->offset($page * $limit)
+                        ->limit($limit)
+                        ->get();
+
+            $this->responder->set('message', 'Data retrieved.');
+            $this->responder->set('meta', $meta);
+            $this->responder->set('data', $data);
+
+            return $this->responder->response();
+        } catch(\Exception $e) {
+            $this->responder->set('message', $e->getMessage());
+            $this->responder->setStatus(500, 'Internal server error.');
+            return $this->responder->response();
+        }
+    }
 
     use ResourceStorable;
     use ResourceShowable;
@@ -68,7 +103,6 @@ class CategoriesResourcesController extends Controller
     use ResourceImportable;
     use ResourceExportable;
     use ResourceReportable;
-
 
     /**
      * Display a listing of the resource.
