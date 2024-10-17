@@ -38,6 +38,7 @@ class Categories extends Resources {
         'name',
         'slug',
         'order',
+        'choice',
         'data',
     ];
 
@@ -48,6 +49,7 @@ class Categories extends Resources {
         'name' => 'required|string',
         'slug' => 'nullable|string',
         'order' => 'nullable|integer',
+        'choice' => 'nullable|boolean',
         'data' => 'nullable|json',
     );
 
@@ -70,8 +72,8 @@ class Categories extends Resources {
     protected $forms = array();
     protected $structures = array();
 
-    protected $searchable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'data');
-    protected $fillable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'data');
+    protected $searchable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data');
+    protected $fillable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data');
     protected $casts = [];
 
     public function parent() {
