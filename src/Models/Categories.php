@@ -13,6 +13,7 @@ use SaltLaravel\Traits\ObservableModel;
 use SaltLaravel\Traits\Uuids;
 use SaltCategories\Traits\Sluggable;
 use SaltCategories\Traits\Orderable;
+use SaltFile\Traits\Fileable;
 
 class Categories extends Resources {
 
@@ -20,6 +21,14 @@ class Categories extends Resources {
     use ObservableModel;
     use Sluggable;
     use Orderable;
+
+    use Fileable;
+    protected $fileableFields = ['thumbnail', 'image'];
+    protected $fileableCascade = true;
+    protected $fileableDirs = [
+        'thumbnail' => 'categories/thumbnail',
+        'image' => 'categories/image',
+    ];
 
     protected $filters = [
         'default',
@@ -84,4 +93,15 @@ class Categories extends Resources {
         return $this->hasMany('SaltCategories\Models\Categories', 'parent_id', 'id')->withTrashed();
     }
 
+    public function image() {
+        return $this->hasOne('SaltFile\Models\Files', 'foreign_id', 'id')
+                    ->where('foreign_table', 'categories')
+                    ->where('directory', 'categories/image');
+    }
+
+    public function thumbnail() {
+        return $this->hasOne('SaltFile\Models\Files', 'foreign_id', 'id')
+                    ->where('foreign_table', 'categories')
+                    ->where('directory', 'categories/thumbnail');
+    }
 }
