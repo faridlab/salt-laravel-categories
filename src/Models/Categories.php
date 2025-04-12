@@ -60,6 +60,8 @@ class Categories extends Resources {
         'order' => 'nullable|integer',
         'choice' => 'nullable|boolean',
         'data' => 'nullable|json',
+        'thumbnail' => 'nullable|image',
+        'image' => 'nullable|image',
     );
 
     protected $auths = array (
@@ -81,8 +83,8 @@ class Categories extends Resources {
     protected $forms = array();
     protected $structures = array();
 
-    protected $searchable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data');
-    protected $fillable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data');
+    protected $searchable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data', 'thumbnail', 'image');
+    protected $fillable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data', 'thumbnail', 'image');
     protected $casts = [];
 
     public function parent() {
