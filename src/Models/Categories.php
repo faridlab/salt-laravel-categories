@@ -87,6 +87,12 @@ class Categories extends Resources {
     protected $fillable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data', 'thumbnail', 'image');
     protected $casts = [];
 
+    public function save(array $options = [])
+    {
+        $this->updated_at = now();
+        return parent::save($options);
+    }
+
     public function parent() {
         return $this->belongsTo('SaltCategories\Models\Categories', 'parent_id', 'id')->withTrashed();
     }
@@ -98,12 +104,14 @@ class Categories extends Resources {
     public function image() {
         return $this->hasOne('SaltFile\Models\Files', 'foreign_id', 'id')
                     ->where('foreign_table', 'categories')
-                    ->where('directory', 'categories/image');
+                    ->where('directory', 'categories/image')
+                    ->withoutTrashed();
     }
 
     public function thumbnail() {
         return $this->hasOne('SaltFile\Models\Files', 'foreign_id', 'id')
                     ->where('foreign_table', 'categories')
-                    ->where('directory', 'categories/thumbnail');
+                    ->where('directory', 'categories/thumbnail')
+                    ->withoutTrashed();
     }
 }
