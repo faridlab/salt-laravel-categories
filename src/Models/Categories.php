@@ -58,7 +58,7 @@ class Categories extends Resources {
         'name' => 'required|string',
         'slug' => 'nullable|string',
         'order' => 'nullable|integer',
-        'choice' => 'nullable|boolean',
+        'choice' => 'nullable|in:1,0,true,false',
         'data' => 'nullable|json',
         'thumbnail' => 'nullable|image',
         'image' => 'nullable|image',
