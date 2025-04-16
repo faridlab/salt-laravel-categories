@@ -48,6 +48,7 @@ class Categories extends Resources {
         'slug',
         'order',
         'choice',
+        'choice_order',
         'data',
     ];
 
@@ -59,6 +60,7 @@ class Categories extends Resources {
         'slug' => 'nullable|string',
         'order' => 'nullable|integer',
         'choice' => 'nullable|in:1,0,true,false',
+        'choice_order' => 'nullable|integer',
         'data' => 'nullable|json',
         'thumbnail' => 'nullable|image',
         'image' => 'nullable|image',
@@ -83,8 +85,8 @@ class Categories extends Resources {
     protected $forms = array();
     protected $structures = array();
 
-    protected $searchable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data', 'thumbnail', 'image');
-    protected $fillable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data', 'thumbnail', 'image');
+    protected $searchable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data', 'thumbnail', 'image', 'choice_order');
+    protected $fillable = array('parent_id', 'type', 'type_other', 'name', 'slug', 'order', 'choice', 'data', 'thumbnail', 'image', 'choice_order');
     protected $casts = [];
 
     public function save(array $options = [])
