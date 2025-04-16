@@ -59,7 +59,8 @@ class Categories extends Resources {
         'name' => 'required|string',
         'slug' => 'nullable|string',
         'order' => 'nullable|integer',
-        'choice' => 'nullable|in:1,0,true,false',
+        // 'choice' => 'nullable|in:true,false,"true","false"',
+        'choice' => 'nullable|boolean',
         'choice_order' => 'nullable|integer',
         'data' => 'nullable|json',
         'thumbnail' => 'nullable|image',
@@ -93,6 +94,15 @@ class Categories extends Resources {
     {
         $this->updated_at = now();
         return parent::save($options);
+    }
+
+    public function setChoiceAttribute($value)
+    {
+        if (gettype($value) == 'boolean') {
+            $this->attributes['choice'] = $value;
+            return;
+        }
+        $this->attributes['choice'] = ($value=='true');
     }
 
     public function parent() {
