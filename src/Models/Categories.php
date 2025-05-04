@@ -105,6 +105,39 @@ class Categories extends Resources {
         $this->attributes['choice'] = ($value=='true');
     }
 
+    public function getHierarchy($id, $reverse = false) {
+        $order = $reverse ? 'DESC' : 'ASC';
+        $hierarchy = DB::select("
+            WITH RECURSIVE category_hierarchy AS (
+                SELECT
+                    id,
+                    name,
+                    slug,
+                    parent_id,
+                    CAST(name AS VARCHAR) AS path
+                FROM categories
+                WHERE id = :id and deleted_at is NUll
+
+                UNION ALL
+
+                SELECT
+                    c.id,
+                    c.name,
+                    c.slug,
+                    c.parent_id,
+                    CAST(ch.path || ' > ' || c.name AS VARCHAR)
+                FROM categories c
+                JOIN category_hierarchy ch ON c.id = ch.parent_id
+                where deleted_at is NUll
+            )
+            SELECT id, name, slug, path
+            FROM category_hierarchy
+            ORDER BY LENGTH(path) {$order};
+        ", ['id' => $id]);
+
+        return $hierarchy;
+    }
+
     public function parent() {
         return $this->belongsTo('SaltCategories\Models\Categories', 'parent_id', 'id')->withTrashed();
     }
