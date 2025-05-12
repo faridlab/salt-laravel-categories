@@ -14,6 +14,7 @@ use SaltLaravel\Traits\Uuids;
 use SaltCategories\Traits\Sluggable;
 use SaltCategories\Traits\Orderable;
 use SaltFile\Traits\Fileable;
+use Illuminate\Support\Facades\Cache;
 
 class Categories extends Resources {
 
@@ -136,6 +137,24 @@ class Categories extends Resources {
         ", ['id' => $id]);
 
         return $hierarchy;
+    }
+
+    function getCategoryHierarchyWithCache($categoryId)
+    {
+        $cacheKey = 'category_hierarchy_' . $categoryId;
+        $cacheDuration = now()->addHours(24); // Cache selama 24 jam
+
+        return Cache::remember($cacheKey, $cacheDuration, function () use ($categoryId) {
+            $hierarchy = collect();
+            $currentCategory = $this->find($categoryId);
+
+            while ($currentCategory) {
+                $hierarchy->prepend($currentCategory);
+                $currentCategory = $currentCategory->parent;
+            }
+
+            return $hierarchy->toArray();
+        });
     }
 
     public function parent() {
