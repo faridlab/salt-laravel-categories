@@ -108,39 +108,34 @@ class Categories extends Resources {
 
     public function getHierarchy($id, $reverse = false) {
         $order = $reverse ? 'DESC' : 'ASC';
-        $cacheKey = 'category_hierarchy_' . $id;
-        $cacheDuration = now()->addHours(24);
-        return Cache::remember($cacheKey, $cacheDuration, function () use ($id, $order) {
-            $hierarchy = DB::select("
-                WITH RECURSIVE category_hierarchy AS (
-                    SELECT
-                        id,
-                        name,
-                        slug,
-                        parent_id,
-                        CAST(name AS VARCHAR) AS path
-                    FROM categories
-                    WHERE id = :id AND deleted_at IS NULL AND id != parent_id
+        $hierarchy = DB::select("
+            WITH RECURSIVE category_hierarchy AS (
+                SELECT
+                    id,
+                    name,
+                    slug,
+                    parent_id,
+                    CAST(name AS VARCHAR) AS path
+                FROM categories
+                WHERE id = :id AND deleted_at IS NULL AND id != parent_id
 
-                    UNION ALL
+                UNION ALL
 
-                    SELECT
-                        c.id,
-                        c.name,
-                        c.slug,
-                        c.parent_id,
-                        CAST(ch.path || ' > ' || c.name AS VARCHAR)
-                    FROM categories c
-                    JOIN category_hierarchy ch ON c.parent_id = ch.id
-                    WHERE c.deleted_at IS NULL AND c.id != c.parent_id
-                )
-                SELECT id, name, slug, path
-                FROM category_hierarchy
-                ORDER BY LENGTH(path) {$order};
-            ", ['id' => $id]);
-
-            return $hierarchy;
-        });
+                SELECT
+                    c.id,
+                    c.name,
+                    c.slug,
+                    c.parent_id,
+                    CAST(ch.path || ' > ' || c.name AS VARCHAR)
+                FROM categories c
+                JOIN category_hierarchy ch ON c.parent_id = ch.id
+                WHERE c.deleted_at IS NULL AND c.id != c.parent_id
+            )
+            SELECT id, name, slug, path
+            FROM category_hierarchy
+            ORDER BY LENGTH(path) {$order};
+        ", ['id' => $id]);
+        return $hierarchy;
     }
 
     function getCategoryHierarchyWithCache($categoryId)
