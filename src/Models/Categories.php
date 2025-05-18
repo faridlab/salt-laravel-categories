@@ -115,9 +115,10 @@ class Categories extends Resources {
                     name,
                     slug,
                     parent_id,
-                    CAST(name AS VARCHAR) AS path
+                    CAST(name AS VARCHAR) AS path,
+                    1 AS depth
                 FROM categories
-                WHERE id = :id AND deleted_at IS NULL AND id != parent_id
+                WHERE id = :id AND deleted_at IS NULL
 
                 UNION ALL
 
@@ -126,10 +127,11 @@ class Categories extends Resources {
                     c.name,
                     c.slug,
                     c.parent_id,
-                    CAST(ch.path || ' > ' || c.name AS VARCHAR)
+                    CAST(ch.path || ' > ' || c.name AS VARCHAR),
+                    ch.depth + 1
                 FROM categories c
                 JOIN category_hierarchy ch ON c.parent_id = ch.id
-                WHERE c.deleted_at IS NULL AND c.id != c.parent_id
+                WHERE c.deleted_at IS NULL AND c.id != c.parent_id AND ch.depth < 5
             )
             SELECT id, name, slug, path
             FROM category_hierarchy
