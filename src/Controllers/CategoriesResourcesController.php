@@ -73,6 +73,11 @@ class CategoriesResourcesController extends Controller
                 'recordsFiltered' => $modelCount->count()?: $count
             );
 
+            // The list sends each name with its depth before it (`-- Bor`) under the same key, `name`. An order on a
+            // bare column name would then be ambiguous between the column and that alias (Postgres refuses it), so
+            // every order is put on the table's own column.
+            $this->qualifyOrders($model);
+
             $data = $model
                         ->select('*', DB::raw("trim(concat_ws(' ', substr('---', 1, categories.order), name)) as name"))
                         ->offset($page * $limit)
@@ -88,6 +93,22 @@ class CategoriesResourcesController extends Controller
             $this->responder->set('message', $e->getMessage());
             $this->responder->setStatus(500, 'Internal server error.');
             return $this->responder->response();
+        }
+    }
+
+    /**
+     * Put each order of the list on the categories table's own column (`name` → `categories.name`), leaving an order
+     * that already names a table, or is an expression, as it is.
+     */
+    protected function qualifyOrders($model): void
+    {
+        $query = $model->getQuery();
+        $table = $this->model->getTable();
+        foreach ((array) $query->orders as $i => $order) {
+            $column = $order['column'] ?? null;
+            if (is_string($column) && $column !== '' && ! str_contains($column, '.')) {
+                $query->orders[$i]['column'] = "{$table}.{$column}";
+            }
         }
     }
 
